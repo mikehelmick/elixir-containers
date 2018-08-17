@@ -1,0 +1,7 @@
+<html>
+<head>
+  <meta name="google-site-verification" content="zxtoun51vEpDRNjWPlUiAiRqUNfUgm9PcsyQo6ZzLwI" />
+</head>
+<body>
+<%= render @view_module, @view_template, assigns %>
+</body>

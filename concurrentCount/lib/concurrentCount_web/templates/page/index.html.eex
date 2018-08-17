@@ -1,0 +1,7 @@
+hello, world!!!
+
+numRequestsStarted: <%= @started %>
+numRequestsRunning: <%= @open %>
+numRequestsFinished: <%= @finished %>
+numRequestsRunningPeak: <%= @peak %>
+node: <%= @node %>
