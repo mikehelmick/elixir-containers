@@ -1,7 +1,7 @@
 defmodule ConcurrentCount.Counter do
   use GenServer
   # GenServer state is
-  # {numOpen, [<pids>], peak}
+  # {numActive, peak, numStarted, numFinished, node}
 
   def start_link(_opts \\ []) do
     state = {0, 0, 0, 0, UUID.uuid4()}
