@@ -5,6 +5,7 @@ numRequestsRunning: <%= @open %>
 numRequestsFinished: <%= @finished %>
 numRequestsRunningPeak: <%= @peak %>
 node: <%= @node %>
+<%= if @showMine do %>
 <br/>
 mineRunning: <%= @mineRunning %> <br/>
 mineCount: <%= @mineCount %> <br/>
@@ -12,3 +13,4 @@ minMine: <%= @minMine %>ms <br/>
 maxMine: <%= @maxMine %>ms <br/>
 totalMineTime: <%= @mineTime %>ms <br/>
 averageMine: <%= @averageMine %>ms <br/>
+<% end %>
