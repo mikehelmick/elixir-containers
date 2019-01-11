@@ -14,9 +14,8 @@ defmodule ConcurrentCount.Environment do
     parse_int_env(System.get_env(name), default)
   end
 
-  defp parse_bool_env(tf, _) when is_boolean(tf) do
-    tf
-  end
+  defp parse_bool_env("true", _), do: true
+  defp parse_bool_ena("false", _), do: false
   defp parse_bool_env(_, default) do
     default
   end

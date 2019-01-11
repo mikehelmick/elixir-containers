@@ -13,7 +13,8 @@ defmodule ConcurrentCount.Application do
       # Start your own worker by calling: ConcurrentCount.Worker.start_link(arg1, arg2, arg3)
       # worker(ConcurrentCount.Worker, [arg1, arg2, arg3]),
       worker(ConcurrentCount.Counter, []),
-      worker(ConcurrentCount.Cpucount, [])
+      worker(ConcurrentCount.Cpucount, []),
+      worker(ConcurrentCount.PutCache, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

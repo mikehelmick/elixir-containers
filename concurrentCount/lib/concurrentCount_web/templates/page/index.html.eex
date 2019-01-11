@@ -14,3 +14,15 @@ maxMine: <%= @maxMine %>ms <br/>
 totalMineTime: <%= @mineTime %>ms <br/>
 averageMine: <%= @averageMine %>ms <br/>
 <% end %>
+
+<%= if @putSize > 0 do %>
+<hr/>
+
+<p>Put cache size: <%= @putSize %></p>
+
+<table border="1">
+ <%= for message <- @putMessages do %>
+  <tr><td><code><%= inspect message %></code></td></tr>
+ <% end %>
+</table>
+<% end %>
