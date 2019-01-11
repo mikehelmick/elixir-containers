@@ -21,7 +21,8 @@ defmodule ConcurrentCountWeb.Router do
 
   scope "/pubsub", ConcurrentCountWeb do
     pipe_through :api
-    post "/", PageController, :put_handler
+    post "/", PageController, :putHandler
+    get "/clear", PageController, :clearPutCache
   end
 
   # Other scopes may use custom stacks.

@@ -20,7 +20,12 @@ defmodule ConcurrentCountWeb.PageController do
     IO.puts("Mining disabled.")
   end
 
-  def put_handler(conn, params) do
+  def clearPutCache(conn, _params) do
+    GenServer.call(PutCache, {:clear})
+    render conn, "put.html"
+  end
+
+  def putHandler(conn, params) do
     GenServer.call(PutCache, {:put, params})
     IO.puts("Received put message, storing contents.")
     render conn, "put.html"

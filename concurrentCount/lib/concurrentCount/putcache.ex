@@ -17,6 +17,10 @@ defmodule ConcurrentCount.PutCache do
     {:reply, {size, new_list}, {size, new_list}}
   end
 
+  def handle_call({:clear}, _from, {_size, _list}) do
+    {:reply, {0, []}, {0, []}}
+  end
+
   def handle_call({:inspect}, _from, {size, list}) do
     {:reply, {size, list}, {size, list}}
   end
